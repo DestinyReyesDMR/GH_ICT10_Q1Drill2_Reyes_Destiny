@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+
+    <py-config>
+        files = ["main.py"]
+    </py-config>
+
+    <style>
+        body {
+        
+            background: linear-gradient(rgba(247, 243, 238, 0.35), rgba(247, 243, 238, 0.35)), 
+                        url('https://i.pinimg.com/736x/35/3a/76/353a76b6d93364cf06d2398b8285550c.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4a3b32;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .main-card {
+            background-color: rgba(255, 252, 248, 0.92);
+            border: 1px solid #dcd2c5;
+            border-radius: 8px;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .custom-input {
+            width: 130px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #c4b5a5;
+            padding: 6px;
+            background-color: #ffffff;
+            color: #3d2e24;
+            font-size: 14px;
+        }
+
+        .custom-input:focus {
+            outline: none;
+            border-color: #8c6d58;
+        }
+
+        .btn-custom {
+            background-color: #e8ded2;
+            color: #4a3b32;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border: 1px solid #c4b5a5;
+            border-radius: 4px;
+        }
+
+        .btn-custom:hover {
+            background-color: #d6c5b3;
+            color: #2b1f17;
+        }
+
+        .output-box {
+            background-color: #ffffff;
+            border: 1px solid #dcd2c5;
+            border-radius: 4px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="py-5">
+
+    <div class="container text-center">
+        <div class="main-card shadow-sm">
+            <h2 class="fw-bold mb-1" style="color: #3d2e24;">Arithmetic Operations</h2>
+            <p class="small text-muted mb-4">Enter two numbers and calculate the answer with your desired arithmetic operation.</p>
+
+            <!-- Inputs -->
+            <div class="d-flex justify-content-center gap-2 mb-3">
+                <input type="number" id="num1" class="custom-input" placeholder="First number">
+                <input type="number" id="num2" class="custom-input" placeholder="Second number">
+            </div>
+
+            <!-- Operation Buttons -->
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+                <button class="btn btn-custom" py-click="add_numbers">ADD</button>
+                <button class="btn btn-custom" py-click="subtract_numbers">SUBTRACT</button>
+                <button class="btn btn-custom" py-click="multiply_numbers">MULTIPLY</button>
+                <button class="btn btn-custom" py-click="divide_numbers">DIVIDE</button>
+                <button class="btn btn-custom" py-click="floor_divide_numbers">FLOOR DIVIDE</button>
+                <button class="btn btn-custom" py-click="modulus_numbers">MODULUS</button>
+                <button class="btn btn-custom" py-click="power_numbers">EXPONENT</button>
+            </div>
+
+
+            <div class="output-box">
+                <span id="output" class="fs-6 fw-normal" style="color: #3d2e24;"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
